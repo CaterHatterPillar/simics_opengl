@@ -7,7 +7,10 @@ cp build_gnu.py bin/
 cp histogram2x3.gnu bin/
 cp dat/* bin/
 
+cd bin/
+
 python build_dat.py
 python build_gnu.py
 
-cp simics_opengl.pdf ../
+cp chess.pdf ../
+cp julia.pdf ../

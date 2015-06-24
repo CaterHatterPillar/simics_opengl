@@ -21,8 +21,8 @@ arg9 = "118x118"
 arg10 = "Yes"
 arg11 = "Yes"
 
-arg12 = "epslatex"
-arg13 = "gnuhistogramssimicsparachess.tex"
+arg12 = "pdf"
+arg13 = "chess.pdf"
 sp = subprocess.Popen(cmd % (arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,
                              arg11, arg12, arg13), shell=True)
 sp.wait()
@@ -40,8 +40,8 @@ arg7 = "225"
 arg8 = "450"
 arg9 = "900"
 
-arg10 = "epslatex"
-arg11 = "gnuhistogramssimicsparajulia.tex"
+arg10 = "pdf"
+arg11 = "julia.pdf"
 sp = subprocess.Popen(cmd % (arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,
                              arg11), shell=True)
 sp.wait()
