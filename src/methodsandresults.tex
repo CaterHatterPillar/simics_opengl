@@ -103,7 +103,7 @@ Fig.~\ref{fig:histogram} indicates that the Chess benchmark, when software raste
 The right-hand side of the graph, showing impaired performance induced by paravirtualization, visualize a distribution decrease.
 This is supported by the data presented in Table~\ref{tab:keyvalpara}.
 We observe that software rasterization outperforms its paravirtualized counterpart, regardless of the number of tiles rendered.
-The benchmark is devised to identify any bottlenecks related to the number of paravirtualized invocations.
+The benchmark is devised to identify any bottlenecks related to the number of paravirtualized function calls.
 Evidently, the prediction of a target-to-host communication latency issue is confirmed.
 
 In Simics, magic instructions incur a context switch cost when resuming execution on the host.
@@ -131,4 +131,4 @@ This entails that workloads that are otherwise sub-optimal for paravirtualizatio
 Thus, the impact of magic instruction overhead is reduced, likely because a costly context switch is not inflicted on Simics.
 We reason that some software rasterized workloads (Chess) may attain decent simulation performance simply because of a fast simulator; when native execution is not available, neither JIT nor interpretation may attain the same speeds as paravirtualization.
 
-The samples collected without hardware-assisted virtualization are not presented in detail. % Really, the reason why they're not included is because the scenario with hardware-assisted virtualization is more interesting.
+The samples collected without hardware-assisted virtualization are not presented in detail in this paper. % Really, the reason why they're not included is because the scenario with hardware-assisted virtualization is more interesting.
