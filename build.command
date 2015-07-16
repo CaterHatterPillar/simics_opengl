@@ -12,5 +12,5 @@ cd bin/
 python build_dat.py
 python build_gnu.py
 
-cp chess.pdf ../
-cp julia.pdf ../
+cp chess.png ../
+cp julia.png ../

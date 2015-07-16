@@ -44,8 +44,11 @@ if(!exists("arg_data1")||!exists("arg_data2")||!exists("arg_data3")||!exists("ar
     pause -1 press(iam) # We should abort script here rather than simply pause it.
 }
 
-set terminal arg_terminal
+set terminal png size 1600, 1000 #arg_terminal
 set output arg_output
+set xtics font "Times-Roman, 35" offset 0,-1
+set lmargin 5 # increase margins to accomodate font size
+set bmargin 5
 
 set multiplot layout 3,2
 set xtics nomirror
@@ -61,7 +64,7 @@ do for [i=1:words(files)] {
 
     unset ylabel
     if(i%2) {
-        set ylabel sprintf("%s", word(ylabels, ceil((i+0.0)/2)))
+        set ylabel sprintf("%s", word(ylabels, ceil((i+0.0)/2))) font "Times-Roman, 35"
     }
 
     unset x2label
