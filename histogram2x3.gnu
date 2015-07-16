@@ -48,7 +48,7 @@ set terminal png size 1600, 1000 #arg_terminal
 set output arg_output
 set xtics font "Times-Roman, 35" offset 0,-1
 set lmargin 5 # increase margins to accomodate font size
-set bmargin 5
+set bmargin 3
 
 set multiplot layout 3,2
 set xtics nomirror
@@ -68,6 +68,14 @@ do for [i=1:words(files)] {
     }
 
     unset x2label
+    set tmargin 3
+    if(i==1 && exists("arg_xlabel1")) {
+        set x2label "Software Rasterization" font "Times-Roman, 35"
+    }
+    if(i==2 && exists("arg_xlabel2")) {
+        set x2label "Paravirtualization" font "Times-Roman, 35"
+    }
+
     stats arg_data name "data" nooutput
 
     hist_numBins = 100
