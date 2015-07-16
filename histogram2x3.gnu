@@ -69,10 +69,10 @@ do for [i=1:words(files)] {
 
     unset x2label
     set tmargin 3
-    if(i==1 && exists("arg_xlabel1")) {
+    if(i==1 || i== 5 && exists("arg_xlabel1")) {
         set x2label "Software Rasterization" font "Times-Roman, 35"
     }
-    if(i==2 && exists("arg_xlabel2")) {
+    if(i==2 || i==5 && exists("arg_xlabel2")) {
         set x2label "Paravirtualization" font "Times-Roman, 35"
     }
 
